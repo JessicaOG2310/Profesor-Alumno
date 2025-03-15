@@ -1,25 +1,27 @@
 #Profesor-Alumno
 namespace Profes
 {
-    internal class Profesor
+    internal class Alumno
     {
-        private String nombreprof;
-        private Alumno alumnito = new Alumno();
+        private int nl;
+        private string nombre;
+        private ArrayList materias = new ArrayList();
+        private ArrayList calificaciones = new ArrayList();
 
-        public string NombreProf { get => nombreprof; set => nombreprof = value; }
-        internal Alumno Alumno1 { get => alumnito; set => alumnito = value; }
-        public void capturarDatosAlumno()
+        public int Nl { get => nl; set => nl = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
+        public ArrayList Materias { get => materias; set => materias = value; }
+        public ArrayList Calificaciones { get => calificaciones; set => calificaciones = value; }
+        public void agregarMaterias(string materia)
         {
-            string nombre;
-            int nl;
-            Console.WriteLine("NL: ");
-            nl = Convert.ToInt16(Console.ReadLine());
-            Console.WriteLine("Nombre: ");
-            nombre = Console.ReadLine();
-            alumnito.Nl = nl;
-            alumnito.Nombre = nombre;
-
+            materias.Add(materia);
         }
+        public void agregarCalificaciones(int calificacion)
+        {
+            calificaciones.Add(calificacion);
+        }
+    }
+}
         public void capturarMaterias()
         {
             string materia;
